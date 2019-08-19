@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--移动端适配-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5">
+    <!--头像-->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>网易严选</title>
+    <!--清除默认样式-->
+    <link rel="stylesheet" href="./css//reset.css">
+    <!--在线ICON图标-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1356861_rdvmt8w8bo.css">
+  </head> 
+  <body>
+    
+    <div id="app"></div>
+    
+  </body>
+  <!--解决点击响应延时0.3s问题-->
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+     }
+  </script>
+</html>

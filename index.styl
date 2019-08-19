@@ -1,0 +1,602 @@
+
+#app
+  width 100%
+  height 9999px
+  position relative
+  //未登录
+  .noLogin
+    height 200px
+    img
+      width 100%
+      height 100px
+  //右侧礼物
+  .rightGift
+    width 300px
+    background white
+    position absolute
+    left 670px
+    top 723px
+    border 1px solid #7e8c8d
+    border-radius 40px
+    img
+     width 70px
+     margin 10px 0px 0px 10px
+  //点击搜索跳转的
+  .bigSearch
+    width 100%
+    height 85px
+    .search
+      width 608px
+      height 62px
+      display inline-block
+      background #f4f4f4
+      font-size 28px
+      color #b4b4b4
+      border 1px solid white
+      border-radius 10px
+      margin 20px 0 0 32px
+      line-height 67px
+    .cancel
+        font-size 30px
+        color #333
+    .PopularSearch
+      width 697px
+      height 600px
+      margin 23px
+      .remensousuo
+        font-size 30px
+        color #b4b4b4
+      ul
+       display flex
+       flex-wrap wrap
+       li
+        font-size 50px
+        margin-right 10px
+        border 2px solid black
+       .onlyRed
+         border-color #b4282d
+         color #b4282d
+  //分类
+  .class
+    .class_Header
+      width 100%
+      .clss_search
+        display inline-block
+        background #eee
+        font-size 28px
+        color #666
+        border 1px solid white
+        border-radius 10px
+        margin 10px 0px 0px 31px
+      span
+        display inline-block
+        width 687px
+        height 66px
+        line-height 66px
+        text-align center
+    .class_line
+      border 1px solid #b4b4b4
+      margin-top 20px
+    .class_Neirong
+      .class_Content
+        float left
+        display inline-block
+        width 180px
+        font-size 34px
+        li
+         margin 54px 0 0 31px
+      .class_Img
+        display inline-block
+        float left
+        padding 47px 0 0 11px
+        .class_BigImg
+          width 528px
+          height 192px
+        .class_smallImg
+          width 144px
+          height 216px
+          ul
+            display flex
+            flex-wrap wrap
+            span
+             font-size 24px
+
+//顶部
+  .header
+    position fixed
+    left 0px
+    /*top:0;*/
+    top  0px
+    z-index 100
+    background white
+    width 100%
+    .logo
+      display inline-block
+      padding  16px 5px 0 31px
+      h1
+        display inline-block
+    .search
+      display inline-block
+      background #eee
+      font-size 28px
+      color #666
+      border 1px solid white
+      border-radius 10px
+    span
+      display inline-block
+      width 440px
+      height 66px
+      line-height 66px
+      text-align center
+    .msiteLogin
+      width 76px
+      height 42px
+      font-size 28px
+      border 1px solid #b4282d
+      color #b4282d
+      text-align center
+      line-height 42px
+      border-radius 10%
+  //头部列表-->
+    .listTop
+      width 100%
+      height 60px
+      ul
+        display flex
+        .first-child
+          padding-right 20px
+        li
+          padding 0 36px
+          font-size 28px
+          &.on
+            a
+              color red
+              border-bottom 3px solid red
+          a
+            color #333
+            line-height 60px
+            width 70px
+//轮播图1
+  .swiper-container
+  //margin-top 150px
+    width 100%
+    height 370px
+//三个小icon
+  .wangyiMyself
+    margin-left 10px
+    i
+      font-size 20px
+      color #f40
+    span
+      font-size 30px
+      color #333
+//分类列表
+  .contentList
+    margin-top 20px
+    height 340px
+    width 100%
+    ul
+      display flex
+      width 100%
+      height 100%
+      flex-wrap wrap
+      margin-bottom 20px
+      li
+        margin 10px 20px 0
+        float left
+        width 110px
+        height 156px
+        a
+          font-size 20px
+          text-align center
+          img
+            width 100px
+            height 110px
+//精选
+  .goodFood
+    img
+      margin-top  10px
+      width 750px
+//超值专区
+  .supperWorth
+    width 750px
+    height 560px
+    padding 20px
+    div
+      float left
+      padding  20px 0 5px 15px
+      &.on
+        border 5px solid white
+        background #F5F5F5
+      a
+        color black
+        font-size 40px
+      p
+        margin-top 20px
+        font-size 20px
+        color #7e8c8d
+  //横线
+  .supperWorthBootom
+    margin-top 50px
+    border-bottom 20px solid #EEEEEE
+//私人订制轮播图
+  .selfSwiper
+    span
+      display block
+      font-size 40px
+      margin 20px
+      color #333
+    .banner_swiper2
+      width 750px
+      height 370px
+      .swiper-slide
+        padding-left 5px
+        img
+          width 200px
+          height 216px
+          background #EEEEEE
+        span
+          font-size 30px
+        p
+         font-size 20px
+         color red
+      .swiper-pagination
+        display flex
+        padding-left 300px
+
+
+  //倒计时
+  .countDown
+    margin-bottom 270px
+    .countDownHeader
+      position relative
+      padding 32px 0px 0px 30px
+      width 100%
+      height 80px
+      display flex
+      .s1
+        font-size 30px
+        line-height 80px
+      p
+       width 43px
+       height 40px
+       font-size 30px
+       background black
+       color white
+       align-items center
+       line-height 40px
+       margin-left 10px
+       margin-top 20px
+      .s2
+        position absolute
+        right 66px
+        top  50px
+        font-size 30px
+        color #333
+    .countDownHeaderImg
+      height 340px
+      width 100%
+      padding 10px
+      span
+        display flex
+        width 100%
+        height 100%
+        flex-wrap wrap
+        margin-left  10px
+        a
+          flex-wrap wrap
+          background #EEEEEE
+          border 10px solid white
+        .origin
+          color red
+          display flex
+          font-size 30px
+          background white
+        .now
+           font-size 30px
+           background white
+//新品首发
+  .newShops
+    margin-bottom 324px
+    .countDownHeader
+      position relative
+      padding 32px 0px 0px 30px
+      width 100%
+      height 80px
+      display flex
+      .s1
+        font-size 30px
+        line-height 80px
+      p
+        width 43px
+        height 40px
+        font-size 30px
+        background black
+        color white
+        align-items center
+        line-height 40px
+        margin-left 10px
+        margin-top 20px
+      .s2
+        position absolute
+        right 66px
+        top  50px
+        font-size 30px
+        color #333
+    //开启
+    .countDownHeaderImg
+      height 340px
+      width 100%
+      ul
+       display flex
+       flex-wrap wrap
+       padding-left 46px
+       li
+        border 3px solid white
+        img
+          background #EEEEEE
+        p
+          font-size 30px
+
+
+
+  //人气推荐
+  .zhangWanYing
+    .countDownHeader
+      position relative
+      padding 32px 0px 0px 30px
+      width 100%
+      height 80px
+      display flex
+      .s1
+        font-size 30px
+        line-height 80px
+      p
+        width 43px
+        height 40px
+        font-size 30px
+        background black
+        color white
+        align-items center
+        line-height 40px
+        margin-left 10px
+        margin-top 20px
+      .s2
+        position absolute
+        right 66px
+        top  50px
+        font-size 30px
+        color #333
+    .tuijian
+      background #FEF0DF
+      margin 20px 25px 10px 25px
+      height 333px
+      img
+        width 370px
+        height 330px
+      .right
+        width 300px
+        height 330px
+        display inline-block
+        padding-bottom 0px
+        .p1
+         font-size 20px
+         width 80px
+         height 40px
+         line-height 40px
+         color #b4282d
+         background white
+         border 1px solid #b4282d
+         margin 0px 0px 16px 20px
+        .p2
+         font-size 30px
+         color black
+         margin 0px 0px 20px 20px
+        .p3
+         font-size 20px
+         color #7e8c8d
+         margin 0px 0px 116px 20px
+        .p4
+          font-size 30px
+          color #b4282d
+          margin 0px 0px 0px 20px
+
+    .renqiBottom
+      margin 20px 0 0 0
+      width 100%
+      height 322px
+      padding-left 40px
+      a
+       width 212px
+       display inline-block
+       img
+         background #f5f5f5
+         width 210px
+         height 210px
+         display flex
+       .p1
+        font-size 28px
+        color black
+       .origin
+        font-size 25px
+        color #b4282d
+ //打折的
+  .manzeng
+     width 50px
+     height 30px
+     background white
+     border 2px solid #b4282d
+     border-radius 10px
+     display flex
+     text-align center
+     line-height 30px
+     font-size 20px
+     color  #b4282d
+     margin  10px 0 0 40px
+
+    //类目热销榜
+  .newShops
+    width 100%
+    height 500px
+    .midImg
+       margin-left 23px
+       display flex
+       height 200px
+      .leftImg
+        width 343px
+        height 200px
+        background #F9F3E4
+        border 5px solid white
+        span
+         font-size 30px
+         color black
+         line-height 200px
+      .rightImg
+        width 350px
+        height 200px
+        background #EBEFF6
+        border 5px solid white
+        a
+          font-size 30px
+          color black
+    .itemImg
+      width 750px
+      height auto
+      margin-left 22px
+      ul
+        display flex
+        flex-wrap wrap
+        li
+          margin-top 20px
+          width 23%
+          background #EEEEEE
+          border 3px solid white
+          font-size 20px
+          text-align center
+          line-height 20px
+          p
+            margin-top 20px
+          img
+           width 100%
+           height 100%
+//底部
+  .footItem
+    position fixed
+    z-index 100
+    left 0
+    right 0
+    bottom 0
+    background-color #fff
+    width 100%
+    height 100px
+    display flex
+    border-top  1px solid #7e8c8d
+    .guide_item
+      display flex
+      flex 1
+      text-align center
+      flex-direction column
+      align-items center
+      margin 5px
+      color #999999
+      &.on
+        color #b4282d
+      span
+        font-size 26px
+        margin-top 8px
+        .iconfont
+          font-size 30px
+          width 30px
+          height 30px
+          display block
+          color green
+  //购物车
+  .noLogin
+    .carHeader
+      width 100%
+      height 85px
+      line-height 100px
+      .leftSpan
+        float left
+        margin-left 30px
+        font-size 35px
+      .rightSpan
+        float right
+        color #B4282D
+        margin-right 40px
+        font-size 35px
+    .mid
+      width 100%
+      height 80px
+      background #eee
+      ul
+        text-align center
+      li
+        margin-left 20px
+        display inline-block
+        font-size 24px
+        color #666
+        line-height 80px
+    .carTop
+      width 100%
+      height 1100px
+      background #f4f4f4
+      position relative
+      i
+        width 200px
+        height 200px
+        font-size 200px
+      button
+        width 500px
+        height 100px
+        background  #b4282d
+        text-align center
+        position absolute
+        left 114px
+        top 668px
+        font-size 30px
+        color white
+        line-height 100px
+        outline none
+  //个人中心
+  .clickLogin
+    .login_head
+      width 100%
+      height 85px
+      background #FAFAFA
+      padding-left 23px
+      i
+        font-size 30px
+        line-height 84px
+      img
+        margin 0 122px 0 155px
+    .login_Content
+      width 100%
+      height 1238px
+      background #F2F5F4
+      img
+        margin 165px 0 127px 102px
+      button
+        width 688px
+        height 100px
+        background #DD1A21
+        margin  2px 1px 22px 28px
+        font-size 40px
+        color white
+      .login_emile
+        border 3px sollid #DD1A21
+        color #DD1A21
+        background white
+    .login_Style
+      position absolute
+      left 220px
+      top 1209px
+      ul
+        display flex
+        li
+          font-size 32px
+          color #7e8c8d
+        span
+          font-size 31px
+          color #7e8c8d
+          margin 0  40px
