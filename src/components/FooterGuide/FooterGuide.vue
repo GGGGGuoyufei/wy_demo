@@ -2,31 +2,31 @@
   <div>
       <!--底部-->
     <footer class="footItem">
-        <a href="javascript:;" class="guide_item on">
+        <a href="javascript:;" class="guide_item msite" :class="{on : $route.path === '/msite'}" @click="goTo('/msite')">
                 <span class="item_icon">
                     <i class="iconfont icon-yemian-copy"></i>
                 </span>
             <span>首页</span>
         </a>
-        <a href="javascript:;" class="guide_item">
+        <a href="javascript:;" class="guide_item classSort" :class="{on : $route.path === '/classSort'}" @click="goTo('/classSort')">
                 <span class="item_icon">
                     <i class="iconfont icon-wsdzb_zbgzt_xxzx_newpxb_type"></i>
                 </span>
             <span>分类</span>
         </a>
-        <a href="javascript:;" class="guide_item">
+        <a href="javascript:;" class="guide_item shiWu" :class="{on : $route.path === '/shiWu'}" @click="goTo('/shiWu')">
                 <span class="item_icon">
                     <i class="iconfont icon-guizi"></i>
                 </span>
             <span>识物</span>
         </a>
-        <a href="javascript:;" class="guide_item">
+        <a href="javascript:;" class="guide_item shopsCar" :class="{on : $route.path === '/shopsCar'}" @click="goTo('/shopsCar')">
                 <span class="item_icon">
                     <i class="iconfont icon-che"></i>
                 </span>
             <span>购物车</span>
         </a>
-        <a href="javascript:;" class="guide_item">
+        <a href="javascript:;" class="guide_item profile" :class="{on : $route.path === '/profile'}" @click="goTo('/profile')">
                 <span class="item_icon">
                     <i class="iconfont icon-gerenzhongxinwoderenwubiaozhuntouxianxing"></i>
                 </span>
@@ -39,6 +39,11 @@
 <script type="text/ecmascript-6">
   
   export default {
+    methods: {
+      goTo (path) {
+      this.$router.replace(path)
+      }
+    }
   }
 </script>
 
@@ -67,13 +72,7 @@
         color #b4282d
       span
         font-size 26px
-        margin-top 8px
+        margin-top 10px
         .iconfont
-          font-size 30px
-          width 30px
-          height 30px
-          display block
-          color green
-  
- 
+          font-size 44px
 </style>

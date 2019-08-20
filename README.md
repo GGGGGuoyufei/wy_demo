@@ -1,29 +1,20 @@
-# gshop-client
+首页
+轮播图位置设置向上的margin-top会影响下面的
+礼物
 
-## Project setup
-```
-yarn install
-```
+新品首发 （满赠，背景颜色，不在同一行显示）
+类目热销榜 字上不去
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
 
-### Compiles and minifies for production
-```
-yarn run build
-```
 
-### Run your tests
-```
-yarn run test
-```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+分类
+图片上不去
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+登录
+
+
+
+
+交互
+ 1 点击搜索 2点击取消  3 点击个人中心  4回退   直接跳到了搜索页面
