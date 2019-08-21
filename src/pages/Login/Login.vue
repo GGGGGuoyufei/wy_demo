@@ -1,11 +1,6 @@
 <template>
   <div class="Ipone_login">
-    <div class="login_head">
-        <i class="iconfont icon-home" @click="$router.push('/msite')"></i>
-        <img src="./images/logo.png" alt="">
-        <i class="iconfont icon-fangdaj" @click="$router.push('/searchpage')"></i>
-        <i class="iconfont icon-che" @click="$router.push('/shopsCar')"></i>
-    </div>
+    <Header/>
     <div class="Ipone_content">
         <img src="./images/wangyyiyanxuan.png" alt="">
         <div class="Ipone_input">
@@ -33,21 +28,17 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import Header from '../../components/Header/Header'
   export default {
+
+    components:{
+      Header
+    }
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-    .login_head
-      width 100%
-      height 85px
-      background #FAFAFA
-      padding-left 23px
-      i
-        font-size 57px
-        line-height 84px
-      img
-        margin 0 132px 0 233px
+    
     .Ipone_content
       width 100%
       height 1250px

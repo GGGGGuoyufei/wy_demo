@@ -21,37 +21,16 @@
                 登录
             </span>
                 <!--头部列表-->
-            <div class="listTop wrapper" ref="scrollwrap">
-                <ul class="content">
-                    <li class="first-child on">
-                        <a href="javascript:;">推荐</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">居家生活</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">服饰鞋包</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">美食酒水</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">美食酒水</a>
-                    </li>
-                    <!-- <li>
-                        <a href="javascript:;">居家生活</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">居家生活</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">居家生活</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">居家生活</a>
-                    </li> -->
-                    <img src="./images/upsanjiao.png" alt="">
-                </ul>
+            <div class="huadong" ref="scrollwrap">
+                <div class="listTop wrapper">
+                    <ul class="content" >
+                        <li class="first-child on">
+                            <a href="javascript:;">推荐</a>
+                        </li>
+                        
+                        <img src="./images/upsanjiao.png" alt="">
+                    </ul>
+                </div>
             </div>
             </header>
             <!--轮播图-->
@@ -466,7 +445,13 @@
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.css'
   import BScroll from 'better-scroll'
+  import {mapState} from 'vuex'
  export default {
+     computed: {
+      ...mapState({
+        homeData: state=>state.home.homeData
+      })
+    },
    mounted(){
     new Swiper('.swiper-container',{
        loop: true, // 循环模式
@@ -547,27 +532,30 @@
       border-radius 10%
       margin-left 21px
   //头部列表-->
-    .listTop
+    .huadong
       width 100%
-      height 60px
-      ul
-        display flex
-        width 100%
-        height 50px
-        .first-child
-          padding-right 20px
-        li
-          padding 0 36px
-          font-size 28px
-          &.on
+      .listTop
+        height 60px
+        ul
+          display flex
+          width 100%
+          height 50px
+           .first-child
+            padding-right 20px
+            
+            li
+             padding 0 36px
+             font-size 28px
+             &.on
+              a
+                width 90px
+                color red
+                border-bottom 3px solid red
             a
-              color red
-              border-bottom 3px solid red
-          a
-            color #333
-            line-height 60px
-            width 70px
-  //轮播图1
+                color #333
+                line-height 60px
+                width 90px
+        //轮播图1
   .swiper-container
     margin-top 150px
     width 100%

@@ -1,19 +1,14 @@
 <template>
   <div class="Ipone_login">
-    <div class="login_head">
-        <i class="iconfont icon-home" @click="$router.push('/msite')"></i>
-        <img src="./images/logo.png" alt="">
-        <i class="iconfont icon-fangdaj" @click="$router.push('/searchpage')"></i>
-        <i class="iconfont icon-che" @click="$router.push('/shopsCar')"></i>
-    </div>
+    <Header/>
     <div class="Ipone_content">
         <img src="./images/wangyyiyanxuan.png" alt="">
         <div class="Ipone_input">
-        <input type="text" placeholder="请输入手机号" autofocus>
-        <input type="text" placeholder="请输入短信验证码">
-        <input type="text" placeholder="遇到问题？">
+        <input type="text" placeholder="邮箱账号" autofocus>
+        <input type="text" placeholder="密码">
+        <input type="text" placeholder="注册账号">
         <button class="DengLu">登录</button>
-        <a href="javascript:;" class="LoginPssWord">使用密码验证登录</a>
+        <a href="javascript:;" class="LoginPssWord">忘记密码</a>
         <span class="qieHuanLogin" @click="$router.push('/profile')">
                 其它登录方式>
         </span>
@@ -23,19 +18,16 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import Header from '../../components/Header/Header'
   export default {
+    components:{
+      Header
+    }
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-    .login_head
-      width 100%
-      height 85px
-      background #FAFAFA
-      padding-left 23px
-      i
-        font-size 57px
-        line-height 84px
+    
       img
         margin 0 132px 0 233px
     .Ipone_content
@@ -57,12 +49,6 @@
          padding-top 70px
          line-height 31px
          color black
-        .iconfont
-          color #ccc
-          font-size 40px
-          position absolute
-          left 591px
-          top 256px
         .getMA
           position absolute
           left 505px
@@ -74,8 +60,8 @@
           border 1px solid #999
         .LoginPssWord
           position absolute
-          left 428px
-          top 449px
+          left 497px
+          top 475px
           font-size 30px
           color #333
           font-family "微软雅黑"
@@ -96,24 +82,10 @@
           color white
           position absolute
           left 49px
-          top 523px
+          top 572px
           border 1px solid red
           border-radius 20px
-        .checkA
-          position absolute
-          left 113px
-          top 641px
-          width 600px
-          height 20px
-          display inline-block
-          font-size 24px
-          input 
-           position absolute
-           left -310px
-           top -2px
-           display flex
-          a
-           color blue
+
      .qieHuanLogin
         font-size 35px
         position absolute

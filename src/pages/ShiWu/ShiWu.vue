@@ -8,15 +8,21 @@
           <i class="iconfont icon-che" @click="$router.push('/shopsCar')"></i>
       </div>
       <div class='XLine'></div>
-      <div class="Shiwu_List">
+      <!-- <div class="Shiwu_List">
         <ul>
           <li class="active">盛夏特别版</li>
           <li>推荐</li>
           <li>好货内部价</li>
           <li>回购榜</li>
+          <li>晒单</li>          <li>好货内部价</li>
+          <li>回购榜</li>
+          <li>晒单</li>          <li>好货内部价</li>
+          <li>回购榜</li>
+          <li>晒单</li>          <li>好货内部价</li>
+          <li>回购榜</li>
           <li>晒单</li>
         </ul>
-      </div>
+      </div> --><aav/>
       <div class="Shiwu_Content">
           <div class="ShiWu_FirstImg">
            <img src="./1.jpeg" alt="">
@@ -55,7 +61,9 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import aav from '../../components/nav/nav'
   import Swiper from 'swiper'
+  
   export default {
     mounted(){
       new Swiper('banner_swiper3',{
@@ -64,8 +72,13 @@
         watchSlidesVisibility: true,//防止不可点击
       })
       
-    }
+      
+    },
+    components:{   
+      aav
+       }
   }  
+  
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
@@ -91,8 +104,10 @@ body
     font-size 35px
     height 50px
     ul
+     float left
      display flex
      li
+      white-space nowrap
       margin 16px 15px
       .active
         color #B4282D
