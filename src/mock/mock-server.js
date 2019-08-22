@@ -10,3 +10,4 @@ import homeData from './homeData.json';
 
 Mock.mock('/home', {code: 0, data: homeData});
 Mock.mock('/categorylist', {code: 0, data: category});
+Mock.mock('/kingkong', {code: 0, data: homeData.kingKongModule});

@@ -8,13 +8,23 @@
 <script type="text/ecmascript-6">
   import FooterGuide from 'components/FooterGuide/FooterGuide.vue'
   export default {
-    mounted(){
-      this.$store.dispatch('getHomeDate')
-    },
     components:{
       FooterGuide
+    },
+    mounted(){
+      // new BScroll('.wrapper',{
+        //     scrollY: true,
+        //     click: true
+        // }),
+        //  this.$nextTick(()=>{
+    //      new BScroll(this.$refs.scrollwrap,{
+    //          scrollX:true
+    //      })
+    //  })
+      //  this.$store.dispatch('getHomeDate')
+      this.$store.dispatch('getSHOPS')
     }
-  }
+  } 
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
