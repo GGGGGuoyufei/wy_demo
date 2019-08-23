@@ -1,38 +1,37 @@
 
-import { getHomeDate , getShopList } from '../../api'
+import { getHomeDate, getCategory  } from '../../api'
 
 
 const state ={
 
   homeDate :{},
-  shopList :[]
+  category :{}
 }
 const getters ={}
+
 const mutations ={
   HOMEDATE(state,data){
     state.homeDate=data
   },
-  SHOPSLIST(state,data){
-    state.shopList=data
-  },
+  CATEGORY(state,data){
+    state.category=data
+  }
 }
 const actions ={
  async getHomeDate({commit}){
     let result = await getHomeDate()
-    console.log(result.data)
+    //console.log(result.data)
     if(result.code === 0){
       commit('HOMEDATE',result.data)
-  }
-},
-    async getSHOPS({commit}){
-      let result = await getShopList()
+    }
+  },
+    async getCategory({commit}){
+      let result = await getCategory()
       console.log(result.data)
       if(result.code === 0){
-        commit('SHOPSLIST',result.data)
+        commit('CATEGORY',result.data)
     }
-
-
-},
+  },
 }
 
 export default{

@@ -1,82 +1,62 @@
 <template>
   <div class="Shiwu">
-      <div class="Shiwu_Head">
-          <i class="iconfont icon-home" @click="$router.push('/msite')"></i>
-          <span class="FaXian" style="color:red">发现</span>
-          <span class="ZhenXuan">甄选家</span>
-          <i class="iconfont icon-fangdaj" @click="$router.push('/searchpage')"></i>
-          <i class="iconfont icon-che" @click="$router.push('/shopsCar')"></i>
-      </div>
+      <Header/>
+
       <div class='XLine'></div>
-      <!-- <div class="Shiwu_List">
-        <ul>
-          <li class="active">盛夏特别版</li>
-          <li>推荐</li>
-          <li>好货内部价</li>
-          <li>回购榜</li>
-          <li>晒单</li>          <li>好货内部价</li>
-          <li>回购榜</li>
-          <li>晒单</li>          <li>好货内部价</li>
-          <li>回购榜</li>
-          <li>晒单</li>          <li>好货内部价</li>
-          <li>回购榜</li>
-          <li>晒单</li>
-        </ul>
-      </div> --><aav/>
-      <div class="Shiwu_Content">
-          <div class="ShiWu_FirstImg">
-           <img src="./1.jpeg" alt="">
-           <img class="topImg" src="./2.jpg" alt="">
-          </div>
-          <div class="ShiWu_jingxuan">
-              <img src="./images/bayuejingxuan.jpeg" alt="">
-          </div>
-          <!--轮播图-->
-            <div class="swiper-container">
-                <div class="swiper-wrapper banner_swiper3">
-                    <div class="swiper-slide">
-                        <img src="https://yanxuan.nosdn.127.net/fca5a6400454717c5b7d6c393071b307.jpg?imageView&quality=75&thumbnail=750x0" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://yanxuan.nosdn.127.net/fca5a6400454717c5b7d6c393071b307.jpg?imageView&quality=75&thumbnail=750x0" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://yanxuan.nosdn.127.net/fca5a6400454717c5b7d6c393071b307.jpg?imageView&quality=75&thumbnail=750x0" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://yanxuan.nosdn.127.net/fca5a6400454717c5b7d6c393071b307.jpg?imageView&quality=75&thumbnail=750x0" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://yanxuan.nosdn.127.net/fca5a6400454717c5b7d6c393071b307.jpg?imageView&quality=75&thumbnail=750x0" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://yanxuan.nosdn.127.net/fca5a6400454717c5b7d6c393071b307.jpg?imageView&quality=75&thumbnail=750x0" alt="lunbotu">
-                    </div>
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
-            </div>
+
+      <aav/>
+      <Swiper/>
+      <div class="life">
+        <img src="https://yanxuan.nosdn.127.net/15645393458728772.jpeg" alt="">
+        <img src="https://yanxuan.nosdn.127.net/15640407915873725.png" alt="">
+      </div>
+      <div class="wuShiKuai">
+         <a href="javascript:;">
+           <img src="https://yanxuan-item.nosdn.127.net/85824fffc0fc2042b3d068a1a20b560f.png?imageView&thumbnail=200x200&quality=95" alt="">
+         </a>
+         <div class="wuShiKuaiBottom">
+           <div class="top">
+              <p class="firstP">6包/提  谷风一木3层软抽面巾纸</p>
+              <p class="twoP">
+                  <span>新人专享价</span>
+                  <span>满赠</span>
+              </p>
+              <p class="threeP">
+                <span class="firstSpan">$19</span>
+                <span class="twoSpan"><del>$20</del></span>
+              </p>
+              <a href="javascript:;">立即抢购</a>
+           </div>
+           <!-- <div>
+              <p class="firstP">6包/提  谷风一木3层软抽面巾纸</p>
+              <p class="twoP">
+                  <span>新人专享价</span>
+                  <span>满赠</span>
+              </p>
+              <p class="threeP">
+                <span class="firstSpan">$19</span>
+                <span class="twoSpan"><del>$20</del></span>
+              </p>
+              <a href="javascript:;">立即抢购</a>
+           </div> -->
+         </div>
       </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import aav from '../../components/nav/nav'
-  import Swiper from 'swiper'
-  
+  import Swiper from './components/Swiper/Swiper.vue'
+  import Header from './components/Header/Header.vue'
   export default {
     mounted(){
-      new Swiper('banner_swiper3',{
-        spaceBetween: 10,
-        slidesPerView: 4,
-        watchSlidesVisibility: true,//防止不可点击
-      })
-      
-      
+     
     },
     components:{   
-      aav
-       }
+      aav,
+      Header,
+      Swiper
+    }
   }  
   
 </script>
@@ -84,20 +64,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 body
   height 10000px 
-  .Shiwu_Head
-      width 100%
-      height 85px
-      background #FAFAFA
-      padding-left 23px
-      .FaXian
-        margin 0px 20px 0px  186px
-        font-size 37px
-      .ZhenXuan
-        margin-right 137px
-        font-size 37px
-      i
-        font-size 57px
-        line-height 84px
+  
   .XLine
     border 1px solid #eee
   .Shiwu_List
@@ -123,4 +90,28 @@ body
        height 417px
   .banner_swiper3
     height 400px
+  .wuShiKuai
+    width 100%
+    height 500px
+    background #95d0a2
+    margin 0px 10px 50px 10px
+    a
+      img 
+        width 200px
+        height 200px
+    .wuShiKuaiBottom
+      width 200px
+      height 300px
+      background white
+      .top
+        .firstP
+          overflow hidden
+          text-overflow ellipsis
+          white-space nowrap
+          font-size 30px
+          margin 10px
+        .twoP
+          .firstP
+           border 2px solid yellow
+     
 </style>

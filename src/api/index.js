@@ -6,5 +6,4 @@ import ajax from './ajax'
 
 export const getHomeDate = ()=> ajax('/home')
 
-export const getShopList =()=>ajax('/kingkong')
-console.log(getShopList())
+export const getCategory = ()=>ajax('/category')

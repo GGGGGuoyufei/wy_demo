@@ -3,7 +3,7 @@
     <!--分类列表-->
     <div class="contentList">
         <ul>
-            <li v-for="(item, index) in shopList" :key="index">
+            <li v-for="(item, index) in homeData.kingKongModule.kingKongList" :key="index">
                 <a href="javascript:;">
                     <img :src="item.picUrl" alt="">
                     <p>{{item.text}}</p>
@@ -73,10 +73,9 @@
   export default {
       computed: {
       ...mapState({
-        shopList: state=>state.home.shopList.kingKongList
+        homeData:state=>state.home.homeDate
       })
     },
-    
   }
 </script>
 

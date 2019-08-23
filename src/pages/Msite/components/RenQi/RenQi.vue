@@ -20,12 +20,12 @@
             </div>
         </div>
         <div class="renqiBottom">
-            <a href="javascript:;">
-                <img src="./images/renqituijian/chuangdan.png" alt="">
-                <p class="p1">网易风扇交流风</p>
-                <p class="origin">￥99</p>
+            <a href="javascript:;" v-for="(item, index) in homeData.popularItemList" :key="index">
+                <img :src="item.primaryPicUrl" alt="">
+                <p class="p1">{{item.simpleDesc}}</p>
+                <p class="origin">¥{{item.retailPrice}}</p>
             </a>
-            <a href="javascript:;">
+            <!-- <a href="javascript:;">
                 <img src="./images/renqituijian/chuangdan.png" alt="">
                 <p class="p1">男士基础休闲裤</p>
                 <p class="origin">￥179</p>
@@ -34,7 +34,7 @@
                 <img src="./images/renqituijian/chuangdan.png" alt="">
                 <p class="p1">轻便午睡折叠床</p>
                 <p class="origin">￥9.9</p>
-            </a>
+            </a> -->
         </div>
         <span class="manzeng">特价</span>
     </div>
@@ -42,7 +42,15 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import {mapState} from 'vuex'
   export default {
+    computed: {
+      ...mapState({
+        homeData:state=>state.home.homeDate
+     
+      })
+
+    },
   }
 </script>
 

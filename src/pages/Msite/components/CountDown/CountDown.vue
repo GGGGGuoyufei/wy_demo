@@ -12,13 +12,13 @@
             </a>
         </div>
         <div class="countDownHeaderImg">
-        <span>
-            <a href="javascript:;">
-                <img src="./images/dazhe/fengshan.png" alt="">
-                <p class="origin">￥99</p>
-                <p class="now"><del>￥213</del></p>
+        <span v-if="homeData.flashSaleModule">
+            <a href="javascript:;" v-for="(item, index) in homeData.flashSaleModule.itemList" :key="index">
+                <img src="./images/dazhe/yifu.png" alt="">
+                <p class="origin">{{item.activityPrice}}</p>
+                <p class="now"><del>{{item.originPrice}}</del></p>
             </a>
-            <a href="javascript:;">
+            <!-- <a href="javascript:;">
                 <img src="./images/dazhe/yifu.png" alt="">
                 <p class="origin">￥179</p>
                 <p class="now"><del>￥213</del></p>
@@ -42,7 +42,7 @@
                 <img src="./images/dazhe/xiedian.png" alt="">
                 <p class="origin">￥123</p>
                 <p class="now"><del>￥223</del></p>
-            </a>
+            </a> -->
         </span>
         </div>
     </div>
@@ -50,7 +50,21 @@
 </template>
 
 <script type="text/ecmascript-6">
+    import {mapState} from 'vuex'
+
   export default {
+    mounted () {
+    },
+    computed: {
+      ...mapState({
+        homeData:state=>state.home.homeDate
+     
+      })
+
+    },
+
+    
+    
   }
 </script>
 

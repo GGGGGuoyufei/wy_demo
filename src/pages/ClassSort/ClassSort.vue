@@ -1,137 +1,136 @@
 <template>
-  <div>
-    <!--分类-->
-      <section class="class">
-        <div class="class">
-          <!--头部-->
-          <header class="class_Header" >
-            <div class="clss_search">
-              <span class="">
-                <img src="./images/fangdajing.png" alt="">
-                搜索商品，共21312件好物
-              </span>
-            </div>
-          </header>
-          <!--横线-->
-          <div class="class_line"></div>
-          <div class="class_Neirong">
-            <div class="class_Content">
-              <ul >
-                  <li>推荐专区</li>
-                  <li>夏凉专区</li>
-                  <li>爆品专区</li>
-                  <li>新品专区</li>
-                  <li>推荐专区</li>
-                  <li>夏凉专区</li>
-                  <li>爆品专区</li>
-                  <li>新品专区</li>
-                  <li>推荐专区</li>
-                  <li>夏凉专区</li>
-                  <li>爆品专区</li>
-                  <li>新品专区</li>
-              </ul>
-            </div>
-            <div class="class_Img">
-              <div class="class_BigImg">
-                <img src="./images/classBigImg.jpg" alt="">
-              </div>
-              <div class="class_smallImg">
-                <ul>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                  <li>
-                    <img src="./images/yuangongjingxuan.png" alt="">
-                    <span>员工精选好货</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <div class="category_box">
+    <div class="cate_header">
+      <div class="search_box">
+        <div @click="$router.push('/search')">
+          <img src="//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png" alt="search">
+          <span>搜索商品，共19999件好物</span>
         </div>
-      </section>
+      </div>
+    </div>
+    
+    <div class="cat_content">
+      <div class="left_nav">
+        <ul>
+          <li
+              v-for="(firstLevel, index) in category.categoryL1List" :key="index"
+              @click="toLevel2(index)"
+          >
+            {{firstLevel.name}}
+          </li>
+        </ul>
+      </div>
+      <div class="right_content" v-if="category.categoryL1List">
+        <img :src="category.categoryL1List.wapBannerUrl" alt="">
+        <ul>
+          <li v-for="(item, index) in category.categoryL1List.subCateList" :key="index">
+            <div>
+              <img :src="item.wapBannerUrl" alt="logo">
+              <div>{{item.name}}</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
+  import {mapState} from 'vuex'
+  import BScroll from 'better-scroll'
+  
   export default {
-    
+    computed: {
+      ...mapState({
+        category: state=>state.home.category
+      })
+    },
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
-  //分类
-  .class
-    .class_Header
+<style  lang="stylus" rel="stylesheet/stylus" scoped>
+  .category_box
+    width 100%
+    padding-top 88px
+    .cate_header
+      position fixed
+      top 0
+      left 0
+      z-index 100
       width 100%
-      .clss_search
-        display inline-block
-        background #eee
+      height 88px
+      border-bottom 1px solid #eee
+      background-color: #fff
+      display flex
+      align-items center
+      justify-content center
+      .search_box
+        width 675px
+        height 56px
+        border-radius 8px
+        background-color: #ededed
+        display flex
+        align-items center
+        justify-content center
+        >div
+          display flex
+          align-items center
+          >img
+            width 28px
+            height 28px
+            margin-right 10px
+          >span
+            font-size 28px
+    .cat_content
+      width 100%
+      font-size 28px
+      .left_nav
+        position fixed
+        top 88px
+        left 0
+        width 162px
+        max-height 1144px
+        border-right 1px solid #eee
+        >ul
+          width 100%
+          >li
+            width 100%
+            height 50px
+            margin-top 40px
+            line-height 50px
+            text-align center
+            font-size 28px
+            color #7e8c8d
+            &:first-child
+              margin-top 20px
+            &.active
+              color $themeColor
+              border-left 6px solid $themeColor
+      .right_content
+        float right
+        width 588px
+        box-sizing border-box
+        padding 15px 30px 100px
         font-size 28px
-        color #666
-        border 1px solid white
-        border-radius 10px
-        margin 10px 0px 0px 31px
-      span
-        display inline-block
-        width 687px
-        height 66px
-        line-height 66px
-        text-align center
-    .class_line
-      border 1px solid #b4b4b4
-      margin-top 20px
-    .class_Neirong
-      .class_Content
-        float left
-        display inline-block
-        width 180px
-        font-size 34px
-        li
-         margin 54px 0 0 31px
-      .class_Img
-        display inline-block
-        float left
-        padding 47px 0 0 11px
-        .class_BigImg
+        >img
           width 528px
           height 192px
-        .class_smallImg
-          width 144px
-          height 216px
-          ul
-            display flex
-            flex-wrap wrap
-            li
-             //margin-right 46px
-             display flex
-             flex-wrap wrap
-             flex-direction column
-            span
-             font-size 24px
+          background-color: #fff
+        >ul
+          width 528px
+          margin-top 20px
+          display flex
+          flex-wrap wrap
+          >li
+            width 144px
+            height 216px
+            margin-right 32px
+            >div
+              >img
+                width 144px
+                height 144px
+              >div
+                width 144px
+                height 72px
+                text-align center
 </style>

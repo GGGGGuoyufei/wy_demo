@@ -1,7 +1,7 @@
 <template>
       <div class="Shiwu_List">
         <ul>
-          <li class="active">盛夏特别版</li>
+          <li class="on">盛夏特别版</li>
           <li>推荐</li>
           <li>好货内部价</li>
           <li>回购榜</li>
@@ -36,10 +36,10 @@ import Bscroll from 'better-scroll'
      float left
      display flex
      li
-      font-size 20px
+      font-size 30px
       white-space nowrap
       margin 16px 15px
-      .active
-        color #B4282D
-        border-bottom 3px solid #B4282D
+    .on
+      border-bottom 3px solid #B4282D
+      color #B4282D
 </style>

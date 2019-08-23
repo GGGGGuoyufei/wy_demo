@@ -4,13 +4,13 @@
     <div class="selfSwiper">
         <span>私人订制</span>
         <div class="swiper-container banner_swiper2">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./images/smallImg/1.png" alt="">
-                    <span class="shopItem">严选礼品卡 </span>
-                    <p>￥1000</p>
+            <div class="swiper-wrapper" v-if="homeData.personalShop">
+                <div class="swiper-slide" v-for="(item, index) in homeData.personalShop" :key="index">
+                    <img :src="item.scenePicUrl" alt="">
+                    <span class="shopItem">{{item.name}} </span>
+                    <p>{{item.retailPrice}}</p>
                 </div>
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                     <img src="./images/smallImg/2.png" alt="">
                     <span class="shopItem">男士印花背心 </span>
                     <p>￥1000</p>
@@ -49,7 +49,7 @@
                     <img src="./images/smallImg/1.png" alt="">
                     <span class="shopItem">男士豆豆鞋</span>
                     <p>￥320</p>
-                </div>
+                </div> -->
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
@@ -61,6 +61,7 @@
 <script type="text/ecmascript-6">
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.css'
+  import {mapState} from 'vuex'
   export default {
     mounted(){
       new Swiper('.banner_swiper2', {
@@ -72,7 +73,14 @@
                 el: '.swiper-pagination',
             }
         })
-    }
+    },
+    computed: {
+      ...mapState({
+        homeData:state=>state.home.homeDate
+     
+      })
+
+    },
   }
 </script>
 

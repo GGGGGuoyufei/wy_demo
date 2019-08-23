@@ -21,8 +21,8 @@
     //          scrollX:true
     //      })
     //  })
-      //  this.$store.dispatch('getHomeDate')
-      this.$store.dispatch('getSHOPS')
+        this.$store.dispatch('getHomeDate')
+      this.$store.dispatch('getCategory')
     }
   } 
 </script>

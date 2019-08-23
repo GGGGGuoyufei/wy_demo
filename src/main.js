@@ -13,3 +13,14 @@ new Vue({
   store
   
 }).$mount('#app')
+// <!--头部列表-->
+// <div class="huadong" ref="scrollwrap">
+//   <div class="listTop wrapper">
+//       <ul class="content" >
+//           <li class="first-child " v-for="(item, index) in homeData.homeNav" :key="index">
+//               <a href="javascript:;">{{item}}</a>
+//           </li> 
+          
+//           <img src="../../../../common/images/upsanjiao.png" alt="">
+//       </ul>
+//   </div>

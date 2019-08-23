@@ -19,30 +19,39 @@
         登录
         </span>
           <!--头部列表-->
-        <div class="huadong" ref="scrollwrap">
-          <div class="listTop wrapper">
-              <ul class="content" >
-                  <li class="first-child " v-for="(item, index) in homeData.homeNav" :key="index">
-                      <a href="javascript:;">{{item}}</a>
-                  </li> 
-                  
-                  <img src="../../../../common/images/upsanjiao.png" alt="">
-              </ul>
-          </div>
-        </div>
+         <div class="Shiwu_List">
+            <ul>
+              <li class="active" v-for="(item, index) in homeData.homeNav" :key="index">{{item}}</li>
+              <!-- <li>推荐</li>
+              <li>好货内部价</li>
+              <li>回购榜</li>
+              <li>晒单</li>          <li>好货内部价</li>
+              <li>回购榜</li>
+              <li>晒单</li>          <li>好货内部价</li>
+              <li>回购榜</li>
+              <li>晒单</li>          <li>好货内部价</li>
+              <li>回购榜</li>
+              <li>晒单</li> -->
+            </ul>
+      </div>
     </header>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import {mapState} from 'vuex'
+  import Bscroll from 'better-scroll'
   export default {
     computed: {
       ...mapState({
         homeData: state=>state.home.homeDate
       })
     },
-    
+     mounted(){
+      new Bscroll('.Shiwu_List',{
+        scrollX:true
+      })
+    }
   }
 </script>
 
@@ -85,28 +94,19 @@
       border-radius 10%
       margin-left 21px
   //头部列表-->
-    .huadong
-      width 100%
-      .listTop
-        height 60px
-        ul
-          display flex
-          width 100%
-          height 50px
-           .first-child
-            padding-right 20px
-            
-            li
-             padding 0 36px
-             font-size 28px
-             &.on
-              a
-                width 90px
-                color red
-                border-bottom 3px solid red
-            a
-                color #333
-                line-height 60px
-                width 90px
+    .Shiwu_List
+      overflow hidden
+      font-size 20px
+      height 50px
+      ul
+        float left
+        display flex
+      li
+        font-size 30px
+        white-space nowrap
+        margin 16px 15px
+        .active
+          color #B4282D
+          border-bottom 3px solid #B4282D
  
 </style>

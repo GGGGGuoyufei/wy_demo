@@ -1,30 +1,30 @@
 <template>
   <div>
     <!--轮播图-->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./images/lunbotu/1.jpg" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/lunbotu/2.jpg" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/lunbotu/3.jpg" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/lunbotu/4.png" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/lunbotu/5.jpg" alt="lunbotu">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/lunbotu/6.jpg" alt="lunbotu">
-                    </div>
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/lunbotu/1.jpg" alt="lunbotu">
             </div>
+            <div class="swiper-slide">
+                <img src="./images/lunbotu/2.jpg" alt="lunbotu">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/lunbotu/3.jpg" alt="lunbotu">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/lunbotu/4.png" alt="lunbotu">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/lunbotu/5.jpg" alt="lunbotu">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/lunbotu/6.jpg" alt="lunbotu">
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
   </div>
 </template>
 

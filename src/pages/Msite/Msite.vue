@@ -75,7 +75,7 @@
     },
    mounted(){
         
-       this.$store.dispatch('getHomeDate')
+      //  this.$store.dispatch('getHomeDate')
     
    }
      

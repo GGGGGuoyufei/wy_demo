@@ -10,13 +10,13 @@
         </div>
         <div class="countDownHeaderImg">
             <ul>
-                <li>
+                <li v-for="(item, index) in homeData.newItemList" :key="index">
                     <img src="../../../../common/images/dazhe/chaung.png" alt="">
-                    <p class="origin">￥99</p>
-                    <p class="now"><del>￥213</del></p>
+                    <p class="origin">￥{{item.retailPrice}}</p>
+                    <p class="now"><del>￥{{item.limitedFlag}}</del></p>
                     <span class="manzeng">特价</span>
                 </li>
-                <li>
+                <!-- <li>
                     <img src="../../../../common/images/dazhe/yifu.png" alt="">
                     <p class="origin">￥179</p>
                     <p class="now"><del>￥213</del></p>
@@ -42,7 +42,7 @@
                     <p class="origin">￥123</p>
                     <p class="now"><del>￥223</del></p>
                     <span class="manzeng">特价</span>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
@@ -50,7 +50,15 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import {mapState} from 'vuex'
   export default {
+    computed: {
+      ...mapState({
+        homeData:state=>state.home.homeDate
+     
+      })
+
+    },
   }
 </script>
 
