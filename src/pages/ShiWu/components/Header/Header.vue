@@ -3,7 +3,7 @@
     <div class="Shiwu_Head">
           <i class="iconfont icon-home" @click="$router.push('/msite')"></i>
           <span class="FaXian" style="color:red">发现</span>
-          <span class="ZhenXuan">甄选家</span>
+          <span class="ZhenXuan" @click="$router.push('/zhenxuan')">甄选家</span>
           <i class="iconfont icon-fangdaj" @click="$router.push('/searchpage')"></i>
           <i class="iconfont icon-che" @click="$router.push('/shopsCar')"></i>
       </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import {mapState} from 'vuex'
+  //import {mapState} from 'vuex'
   export default {
   }
 </script>

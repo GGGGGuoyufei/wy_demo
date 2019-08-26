@@ -2,7 +2,7 @@
   <div class="category_box">
     <div class="cate_header">
       <div class="search_box">
-        <div @click="$router.push('/search')">
+        <div @click="$router.push('/SearchPage')">
           <img src="//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png" alt="search">
           <span>搜索商品，共19999件好物</span>
         </div>

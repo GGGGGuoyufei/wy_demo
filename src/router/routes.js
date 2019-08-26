@@ -7,6 +7,7 @@ import Profile from '../pages/Profile/Profile.vue'
 import SearchPage from '../pages/SearchPage/SearchPage.vue'
 import Login from '../pages/Login/Login.vue'
 import Email from '../pages/Email/Email.vue'
+import ZhenXuan from '../pages/ShiWu/pages/ZhenXuan/ZhenXuan.vue'
 export default[
     {
         path:'/msite',
@@ -56,4 +57,8 @@ export default[
         path:'/',
         redirect:'/msite'
     },
+    {
+        path:'/zhenxuan',
+        component:ZhenXuan
+    }
 ]

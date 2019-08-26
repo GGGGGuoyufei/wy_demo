@@ -1,15 +1,15 @@
 <template>
   <div>
 <!--点击搜索跳转的-->
-    <div class="bigSearch">
+    <div class="bigSearch" >
         <div class="search">
-        <span class="new">
-            <img src="./fangdajing.png" alt="">
-            <input type="text" placeholder="新款爆品  季末特惠">
-        </span>
-        </div>
+            <span class="new">
+                <img src="./fangdajing.png" alt="">
+                <input type="text" placeholder="新款爆品  季末特惠" v-model="isShow">
+            </span>
+            </div>
         <span class="cancel" @click="$router.push('/msite')">取消</span>
-        <div class="PopularSearch">
+        <div class="PopularSearch" v-show="!isShow">
             <span class="remensousuo">热门搜索</span>
             <ul>
                 <li class="onlyRed">爆款行李箱</li>
@@ -24,12 +24,30 @@
                 <li>电动牙刷</li>
             </ul>
         </div>
+          <ul v-show="isShow">
+          <li>香氛牙膏 谈吐芬芳</li>
+          <li>清潭云朵拖鞋9.9元</li>
+          <li>中秋月饼 上心热卖</li>
+          <li>韩国造 睡眠喷雾</li>
+          <li class="onlyRed">酸梅汤</li>
+          <li>杯子</li>
+          <li>内裤</li>
+          <li class="onlyRed">锅</li>
+          <li>电动牙刷</li>
+        </ul>
     </div>
+    <SearchContent/>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  //import SearchContent from './components/SearchContent/SearchContent.vue'
   export default {
+    data(){
+      return{
+        isShow:''
+      }
+    }
   }
 </script>
 
@@ -80,4 +98,10 @@
        .onlyRed
          border-color #b4282d
          color #b4282d
+    ul
+      margin 20px
+      li
+        border-bottom 3px solid #eee
+        font-size 30px
+        margin-top 50px
 </style>

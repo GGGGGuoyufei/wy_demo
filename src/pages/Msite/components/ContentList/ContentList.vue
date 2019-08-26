@@ -9,60 +9,6 @@
                     <p>{{item.text}}</p>
                 </a>
             </li>
-            <!-- <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/2.png" alt="">
-                    <p>居家生活</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/3.png" alt="">
-                    <p>服饰鞋包</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/4.png" alt="">
-                    <p>新品首发</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/5.png" alt="">
-                    <p>美食酒水</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/6.png" alt="">
-                    <p>个护清理</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/7.png" alt="">
-                    <p>母婴亲子</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/8.png" alt="">
-                    <p>运动旅行</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/9.png" alt="">
-                    <p>全球特色</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="./images/contentImg/10.gif" alt="">
-                    <p>超级会员</p>
-                </a>
-            </li> -->
         </ul>
     </div>
   </div>

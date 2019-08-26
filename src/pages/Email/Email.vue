@@ -4,11 +4,11 @@
     <div class="Ipone_content">
         <img src="./images/wangyyiyanxuan.png" alt="">
         <div class="Ipone_input">
-        <input type="text" placeholder="邮箱账号" autofocus>
-        <input type="text" placeholder="密码">
+        <input type="text" placeholder="邮箱账号" autofocus v-model="Email">
+        <input type="password" placeholder="密码">
         <input type="text" placeholder="注册账号">
         <button class="DengLu">登录</button>
-        <a href="javascript:;" class="LoginPssWord">忘记密码</a>
+        <a href="https://reg.163.com/naq/findPassword#/verifyAccount" class="LoginPssWord">忘记密码</a>
         <span class="qieHuanLogin" @click="$router.push('/profile')">
                 其它登录方式>
         </span>
@@ -20,6 +20,16 @@
 <script type="text/ecmascript-6">
   import Header from '../../components/Header/Header'
   export default {
+    // data:{
+    //   return(){
+    //     Email :'' //邮箱
+    //   }
+    // },
+    computed:{
+      isEmail(){
+        return /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(this.Email)
+      }
+    },
     components:{
       Header
     }
